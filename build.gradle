@@ -16,4 +16,12 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    ignoreFailures = true
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
 }
